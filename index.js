@@ -36,6 +36,7 @@ io.on("connection", (socket) => {
     socket.disconnect();
     return;
   }
+  socket.emit("connect", {socketID: socket.id})
   socket.join(roomName);
   socket.onAny((event, ...args) => {
     socket.to(roomName).emit(event, ...args);
