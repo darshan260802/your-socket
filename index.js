@@ -21,9 +21,9 @@ const io = new Server(server, {
 });
 
 io.on('connection', (socket) => {
-    const roomName = socket.handshake.query.roomName;
+    const roomName = socket.handshake.query.namespace;
     if(['', undefined, null].includes(roomName?.trim())) {
-        socket.emit('error', 'Invalid room name');
+        socket.emit('error', 'Invalid Name Space');
         socket.disconnect();
         return;
     }
