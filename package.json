@@ -1,0 +1,21 @@
+{
+  "name": "your-socket",
+  "version": "1.0.0",
+  "description": "Simple Socket Project to provide basic socket service to everyone",
+  "main": "index.js",
+  "author": "Darshan Patel",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
