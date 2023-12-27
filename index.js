@@ -38,7 +38,7 @@ io.on("connection", (socket) => {
   }
   socket.emit("connect_success", {socketID: socket.id})
   socket.join(roomName);
-  socket.on("SEND_TO", ([target,event, ...args]) => {
+  socket.on("SEND_TO", (target,event, ...args) => {
     socket.to(target).emit(event, ...args);
   })
   socket.onAny((event, ...args) => {
